@@ -1,0 +1,145 @@
+.socials {
+    font-family: $roboto;
+    padding-top: 60px;
+    margin-bottom: 90px;
+    &__inner {
+        @include flex(space-between, center);
+        & span {
+            font-weight: 700;
+        }
+    }
+
+    &__text {
+        width: 470px;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 43px;
+        margin-bottom: 40px;
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 27px;
+        margin-bottom: 120px;
+    }
+
+    &__items {
+        @include flex(start, center);
+        flex-direction: row;
+    }
+
+    &__item {
+        text-align: center;
+    }
+
+    &__link {
+    }
+
+    &__gallery {
+    }
+}
+.container {
+}
+.inst {
+}
+.facebook {
+    margin-left: 18px;
+}
+.twitter {
+    margin-top: 4px;
+    margin-left: 10px;
+}
+.socials {
+
+    &__gallery {
+        @include flex(start, start);
+        flex-direction: row-reverse;
+
+    }
+}
+.main-image {
+}
+.top {
+    padding-bottom: 10px;
+}
+.secondary-image {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 1200px) {
+
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 769px) and (max-width: 991px) {
+    .socials {
+        &__inner {
+            max-width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        &__text {
+            text-align: center;
+        }
+        &__subtitle {
+            margin-bottom: 40px;
+        }
+        &__items {
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 768px) {
+    .socials {
+        &__inner {
+            max-width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        &__text {
+            text-align: center;
+        }
+        &__subtitle {
+            margin-bottom: 40px;
+        }
+        &__items {
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+    .socials {
+        &__text {
+            text-align: center;
+        }
+        &__subtitle {
+            margin-bottom: 40px;
+        }
+        &__items {
+            justify-content: center;
+        }
+        &__gallery {
+            display: none;
+        }
+    }
+}
+

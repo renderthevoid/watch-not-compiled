@@ -1,0 +1,87 @@
+.footer {
+    background-color: #444240;
+    color: white;
+    padding-bottom: 40px;
+    & a, p {
+        color: rgba(255, 255, 255, 0.75);
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        margin-bottom: 15px;
+    }
+
+    &__inner {
+        @include flex(space-between, center);
+        padding-top: 80px;
+    }
+
+    &__column {
+        @include flex(space-between, start);
+        flex-direction: column;
+        
+        & h2 {
+
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        margin-bottom: 33px;
+    }
+}
+.container {
+}
+@media (min-width: 1200px) {
+
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 769px) and (max-width: 991px) {
+    .footer {
+        height: 63%;
+        &__inner {
+            justify-content: space-around;
+        }
+        &__column {
+            width: 40%;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 768px) {
+    .footer {
+        height: 57%;
+        &__inner {
+            justify-content: space-around;
+        }
+        &__column {
+            width: 40%;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+    .footer {
+        height: 75%;
+        &__inner {
+            justify-content: space-around;
+        }
+        &__column {
+            width: 50%;
+            margin-bottom: 10px;
+        }
+    }
+}

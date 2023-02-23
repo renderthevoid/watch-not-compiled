@@ -1,0 +1,161 @@
+.catalog {
+    padding-top: 50px;
+    margin-bottom:50px;
+    background-image: url("../images/ellipse.png"), url("../images/ellipse2.png");
+    background-repeat: no-repeat;
+    background-position: right center, right top;
+    &__inner {
+        @include flex(space-around, center);
+        flex-direction: row;
+    }
+}
+.slider {
+    width: 520px;
+    @include flex(start, flex-end);
+    flex-direction: column;
+    position: relative;
+    &::after {
+        content: url("../images/background_banner_1.png");
+        position: absolute;
+        z-index: -1;
+        top: -14%;
+        bottom: 0;
+        left: -40%;
+    }
+    &-wrapper {
+        width: 100%;
+        margin-bottom: 20px;    
+    }
+
+    &-inner {
+    }
+    
+    &-counter {
+        @include flex(center, center);
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        margin-right: 80px;
+    }   
+
+    &-prev {
+        cursor: pointer;
+    }
+
+    #current {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 16px;
+        padding: 0 20px;
+    }
+
+    &-next {
+        cursor: pointer;
+    }
+
+    & .slide {
+        width: 100%;
+        height: 390px;
+        img { 
+            width: 100%; // картинки тоже
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+}
+
+.catalog {
+
+    &__text {
+        width: 40%;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 43px;
+        margin-bottom: 38px;
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        margin-bottom: 45px;
+    }
+
+    &__button {
+    }
+}
+.btn {
+}
+.button-catalog {
+    padding: 27px 38px;
+    color: white;
+    background-color: $btn;
+    transition: 0.5s;
+    border: 1px solid transparent;
+    &:hover {
+        background-color: white;
+        color: $btn;
+        border: 1px solid $btn;
+    }
+}
+
+@media (min-width: 1200px) {
+
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 769px) and (max-width: 991px) {
+    .catalog {
+        background: none;
+        &__text {
+            padding-top: 50px;
+            text-align: center;
+            width: 60%;
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 768px) {
+
+    .catalog {
+        background: none;
+        &__text {
+            padding-top: 40px;
+            text-align: center;
+            width: 80%;
+        }
+    }
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+    .slider {
+        width: 100%;
+        & .slide {
+            width: 100%;
+            img { 
+                width: 100%; // картинки тоже
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .catalog {
+        background: none;
+        &__text {
+            padding-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Kanit:wght@400;700&family=Karla:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+$font: 'Playfair Display', sans-serif;
+$roboto: 'Roboto', sans-serif;
+//цвета
+$dark: #1B1A17;
+$brown: #555248;
+$gray: #8B8371;
+$lightpink: #E6C8B4;
+$btn: #D4B098;
+
+//контейнеры
+$container: 1170px;
+$mc: 0 auto;
+
+body, html {
+    font-family: $font;
+    color: $dark;
+    font-weight: 400;
+    font-size: 14px;
+    overflow-x: hidden;
+}
+.container {
+    max-width: $container;
+    margin: $mc;
+    padding: 0 15px;
+}
